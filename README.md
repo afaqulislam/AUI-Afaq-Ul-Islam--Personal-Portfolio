@@ -36,6 +36,6 @@ A fully responsive and modern personal portfolio website built using **HTML, CSS
 
 ### 📌 Live Demo
 
-[View Live Demo](https://aui.vercel.app/)
+[View Live Demo](https://aui-portfolio.vercel.app/)
 
 
