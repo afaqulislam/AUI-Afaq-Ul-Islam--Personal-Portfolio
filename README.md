@@ -37,3 +37,6 @@ A fully responsive and visually appealing portfolio website developed using **HT
 👉 [View Portfolio Live](https://aui-portfolio.vercel.app/)
 
 ---
+
+🚀 Crafted with passion and precision by Afaq Ul Islam — a frontend developer dedicated to clean code, creative UI, and pixel-perfect execution.
+
