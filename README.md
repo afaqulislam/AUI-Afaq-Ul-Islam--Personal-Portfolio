@@ -1,41 +1,39 @@
+# 🚀 AUI — Afaq Ul Islam Portfolio Website | Frontend Developer
 
-
-### 🚀 AUI-Afaq Ul Islam Portfolio Website | Frontend Developer
-
----
-
-### 🖼️ Preview
+## 🖼️ Preview
 
 ![Portfolio Preview](./assets/img/preview.png)
 
 ---
 
-A fully responsive and modern personal portfolio website built using **HTML, CSS, and JavaScript** — tailored to showcase my frontend development skills. This portfolio reflects my ability to convert UI designs into clean, responsive, and interactive web applications.
+## 🌐 Overview
+
+A fully responsive and visually appealing portfolio website developed using **HTML5, CSS3, and Vanilla JavaScript**. This project highlights my frontend development expertise — translating UI/UX designs into clean, performant, and interactive web interfaces.
 
 ---
 
-### 🛠️ Features
+## ✨ Key Features
 
-- 🎨 **Design-to-Code Implementation** — Converts Figma/Adobe XD designs into functional frontend layouts
-- 🌙 **Dark Theme** — Beautiful dark UI with modern aesthetics
-- 📱 **Mobile-First** — Built with mobile-first approach, fully responsive across all devices
-- ✨ **Scroll Animations** — Smooth transitions and animations while scrolling
-- 📩 **Contact Form** — Email sending functionality using [EmailJS](https://www.emailjs.com/)
-- 🎯 **Clean UI** — Neat and minimal user interface with customizable accent colors
-- 💡 **Easily Customizable** — You can change theme colors and content to fit your personal branding
+- 🎨 **Pixel-Perfect Design Implementation** — Converts Figma/Adobe XD designs into pixel-perfect web layouts
+- 🌗 **Dark Mode Support** — Sleek dark theme with modern visual aesthetics
+- 📱 **Mobile-First Design** — Optimized for all screen sizes with a responsive layout strategy
+- 🧱 **Smooth Scroll Animations** — Enhances user experience with subtle animations
+- 📬 **Contact Form Integration** — Email functionality powered by [EmailJS](https://www.emailjs.com/)
+- 🛠️ **Customizable UI** — Easily change theme colors and content for personal branding
+- 🔍 **SEO Friendly** — Clean code structure and best practices for discoverability
 
 ---
 
-### 🧑‍💻 Tech Stack
+## 🧑‍💻 Tech Stack
 
 - **HTML5**
 - **CSS3**
-- **Vanilla JavaScript (ES6+)**
+- **JavaScript (ES6+)**
 
 ---
 
-### 📌 Live Demo
+## 🔗 Live Demo
 
-[View Live Demo](https://aui-portfolio.vercel.app/)
+👉 [View Portfolio Live](https://aui-portfolio.vercel.app/)
 
-
+---
