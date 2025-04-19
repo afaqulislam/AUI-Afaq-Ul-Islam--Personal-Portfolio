@@ -1,4 +1,4 @@
-# 🚀 AUI — Afaq Ul Islam Portfolio Website | Frontend Developer
+# 🚀 AUI — Afaq Ul Islam Portfolio Website | Full Stack Developer & Design-to-Code Expert
 
 ## 🖼️ Preview
 
@@ -38,5 +38,5 @@ A fully responsive and visually appealing portfolio website developed using **HT
 
 ---
 
-🚀 Crafted with passion and precision by Afaq Ul Islam — a frontend developer dedicated to clean code, creative UI, and pixel-perfect execution.
+🚀 Crafted with passion and precision by Afaq Ul Islam — a full stack developer dedicated to clean code, creative UI, and pixel-perfect execution.
 

@@ -169,6 +169,7 @@ img {
   font-weight: 600;
   text-transform: uppercase;
 }
+
 /*=============== LOADER ===============*/
 #loading-screen {
   position: fixed;
@@ -202,7 +203,7 @@ img {
 
 /* GIF Styling */
 .loader__gif {
-  width: 20rem;
+  width: min(20rem, 80vw);
   height: auto;
   object-fit: contain;
 }
@@ -216,7 +217,7 @@ img {
   background-color: hsla(0, 0%, 98%, 0.1);
   width: 88%;
   margin-inline: auto;
-  -webkit-backdrop-filter: blur(16%);
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   padding: 1rem 2rem;
   border-radius: 4rem;
@@ -265,6 +266,7 @@ img {
   position: absolute;
   justify-self: center;
   align-self: flex-end;
+  object-fit: cover;
 }
 
 .perfil__data {
@@ -275,30 +277,37 @@ img {
   padding: 1.5rem;
   border-radius: 1.5rem;
   border: 2px solid hsla(0, 0%, 100%, 0.5);
+  width: 100%;
+  max-width: 100%;
 }
 
 .perfil__name {
   font: var(--font-regular) var(--biggest-font-size) var(--second-font);
   margin-bottom: 1rem;
+  word-wrap: break-word;
 }
 
 .perfil__buttons {
   display: grid;
   column-gap: 0.5rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
 }
 
 .perfil__buttons .button {
   padding: 0.75rem 0;
+  text-align: center;
 }
 
 /*===== INFO =====*/
 .info,
 .about,
-.skills {
+.skills,
+.services__card {
   background-color: var(--container-color);
   padding: 1rem 1.5rem;
   border-radius: 2rem;
+  height: 100%;
 }
 
 .info__circle {
@@ -306,10 +315,12 @@ img {
   height: 2rem;
   background-color: var(--first-color);
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .info__name {
   font: var(--font-regular) var(--h1-font-size) var(--second-font);
+  word-wrap: break-word;
 }
 
 .info__data {
@@ -317,6 +328,7 @@ img {
   justify-content: center;
   align-items: center;
   column-gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .info__image {
@@ -332,6 +344,7 @@ img {
   width: 200px;
   justify-self: center;
   align-self: flex-end;
+  object-fit: cover;
 }
 
 .info__description {
@@ -383,9 +396,11 @@ img {
 }
 
 .about__img {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   justify-self: center;
   transform: translateY(-2.5rem);
+  object-fit: cover;
 }
 
 .about__note {
@@ -396,6 +411,7 @@ img {
 .about .button {
   width: 100%;
 }
+
 /*===== SKILLS =====*/
 .skills__title {
   font-size: var(--h2-font-size);
@@ -421,6 +437,7 @@ img {
 .skills__description {
   font-size: var(--small-font-size);
 }
+
 /*=============== BUTTON ===============*/
 .button {
   display: inline-flex;
@@ -431,6 +448,8 @@ img {
   padding: 1.25rem 2.5rem;
   border-radius: 4rem;
   transition: background-color 0.4s;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .button__black {
@@ -446,6 +465,9 @@ img {
   background-color: var(--container-color);
   padding: 1.5rem;
   border-radius: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .projects__image {
@@ -457,6 +479,8 @@ img {
 
 .projects__img {
   transition: transform 0.4s;
+  width: 100%;
+  aspect-ratio: 16 / 9;
 }
 
 .projects__name {
@@ -467,6 +491,7 @@ img {
 .projects__description {
   color: var(--text-color);
   margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
 
 .projects__skill {
@@ -475,7 +500,7 @@ img {
 }
 
 .projects__skill:hover {
-  transition: translateY(-0.25rem);
+  transform: translateY(-0.25rem);
 }
 
 .projects__skills {
@@ -488,6 +513,9 @@ img {
   column-gap: 0.75rem;
   border-radius: 4rem;
   margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .projects__button {
@@ -524,6 +552,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 }
 
 .certificates__image {
@@ -537,18 +566,18 @@ img {
 .certificates__img {
   transition: transform 0.4s;
   width: 100%;
+  aspect-ratio: 16 / 9;
 }
 
 .certificates__name {
   font-size: var(--h3-font-size);
   margin-bottom: 0.5rem;
-  text-align: center;
 }
 
 .certificates__description {
   color: var(--text-color);
-  text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
 
 .certificates__card:hover .certificates__img {
@@ -606,10 +635,12 @@ img {
 .experience__card {
   display: grid;
   row-gap: 1rem;
+  height: 100%;
 }
 
 .experience__company {
-  font-size: var(--h2-font-size);
+  font-size: var(--h1-font-size);
+  word-wrap: break-word;
 }
 
 .experience__data {
@@ -634,6 +665,7 @@ img {
 .experience__description {
   color: var(--text-color);
 }
+
 /*=============== CONTACT ===============*/
 .contact__group,
 .contact__form {
@@ -649,6 +681,7 @@ img {
   padding: 1.25rem;
   border-radius: 4rem;
   color: var(--white-color);
+  width: 100%;
 }
 
 .contact__input::placeholder {
@@ -685,6 +718,7 @@ img {
 .footer__container {
   row-gap: 2.5rem;
 }
+
 .footer__logo {
   display: flex;
   justify-content: flex-start;
@@ -741,6 +775,7 @@ img {
   font-size: var(--small-font-size);
   color: var(--text-color);
 }
+
 .footer__copy span {
   color: hsl(14, 80%, 49%);
 }
@@ -792,10 +827,76 @@ img {
 @media screen and (max-width: 320px) {
   .container {
     margin-inline: 1rem;
+    width: calc(100% - 2rem);
   }
 
   .nav {
+    padding: 0.75rem;
+    width: 95%;
+  }
+
+  .nav__list {
+    gap: 0.25rem;
+  }
+
+  .nav__link {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 1rem;
+  }
+
+  .perfil {
+    height: 300px;
+  }
+
+  .perfil__data {
+    padding: 0.75rem;
+  }
+
+  .perfil__buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .projects__card,
+  .certificates__card,
+  .services__card,
+  .info,
+  .about,
+  .skills {
     padding: 1rem;
+    border-radius: 1.5rem;
+  }
+}
+
+/* For extra small devices */
+@media screen and (max-width: 240px) {
+  .container {
+    margin-inline: 0.5rem;
+    width: calc(100% - 1rem);
+  }
+
+  .nav {
+    padding: 0.5rem;
+    width: 98%;
+  }
+
+  .nav__list {
+    gap: 0.15rem;
+  }
+
+  .nav__link {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .perfil {
+    height: 250px;
+    border-radius: 1rem;
+  }
+
+  .perfil__data {
+    padding: 0.5rem;
   }
 }
 
@@ -871,6 +972,7 @@ img {
   .section {
     padding-block: 3rem 4rem;
   }
+
   .section__title {
     font-size: var(--h1-font-size);
     margin-bottom: 4rem;
@@ -886,10 +988,13 @@ img {
     grid-row: 1 / 3;
     padding: 2rem;
   }
+
   .perfil__img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
   }
+
   .perfil__data {
     width: 370px;
     padding: 1.5rem;
@@ -900,6 +1005,7 @@ img {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
+
   .info__name {
     font-size: var(--h2-font-size);
   }
@@ -909,9 +1015,11 @@ img {
     grid-row: 1 / 3;
     align-content: center;
   }
+
   .about__image {
     height: 210px;
   }
+
   .about__img {
     transform: translateY(-1rem);
   }
@@ -920,20 +1028,22 @@ img {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
   }
+
   .skills__title {
     font-size: var(--h3-font-size);
   }
 
   .projects__container {
-    grid-template-columns: repeat(3, 368px);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
+
   .projects__card {
     padding-bottom: 2rem;
   }
 
   .certificates__container {
-    grid-template-columns: repeat(3, 368px);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
 
@@ -942,15 +1052,18 @@ img {
   }
 
   .services__container {
-    grid-template-columns: repeat(3, 368px);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
+
   .services__card {
     padding-block: 6rem 5rem;
   }
+
   .services__icon i {
     font-size: 3.5rem;
   }
+
   .services__circle {
     width: 4rem;
     height: 4rem;
@@ -961,13 +1074,16 @@ img {
   .experience__container {
     row-gap: 4rem;
   }
+
   .experience__card {
     grid-template-columns: 350px 510px;
     column-gap: 8rem;
   }
+
   .experience__company {
     font-size: var(--h1-font-size);
   }
+
   .experience__data {
     padding: 2rem;
     border-radius: 2rem;
@@ -976,12 +1092,15 @@ img {
   .contact__container {
     grid-template-columns: 620px;
   }
+
   .contact__group {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .contact__area {
     height: 15rem;
   }
+
   .contact__button {
     width: max-content;
     justify-self: center;
@@ -990,9 +1109,11 @@ img {
   .footer {
     padding-top: 3rem;
   }
+
   .footer__links {
     column-gap: 3rem;
   }
+
   .footer__copy {
     margin-top: 7rem;
   }
@@ -1009,6 +1130,7 @@ img {
     bottom: 0;
     margin-block: auto;
   }
+
   .nav__list {
     flex-direction: column;
     row-gap: 1.25rem;
@@ -1020,5 +1142,58 @@ img {
 
   .scrollup {
     right: 4rem;
+  }
+}
+
+/* For ultra-wide screens */
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .home__container {
+    grid-template-columns: 320px 700px 320px;
+  }
+
+  .perfil__data {
+    width: 450px;
+  }
+
+  .projects__container,
+  .certificates__container,
+  .services__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .experience__card {
+    grid-template-columns: 400px 600px;
+  }
+
+  .contact__container {
+    grid-template-columns: 800px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .nav,
+  .scrollup,
+  .footer {
+    display: none;
+  }
+
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .section {
+    page-break-inside: avoid;
+    padding: 1rem 0;
   }
 }
